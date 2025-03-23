@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - Salud</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+</head>
+<body>
+    <div class="login-container">
+        <img src="src/logo.png" alt="Fenpruss Logo" class="logo">
+        <div class="header-group">
+            <h4>Recuperar contraseña</h4>
+            <p class="text-secondary">Ingresa tu correo electrónico para recibir un código de recuperación</p>
+        </div>
+        <form class="form-group" action="verificar-codigo.html">
+            <div class="inputs-group">
+                <label for="email">Correo electrónico</label>
+                <div class="input-wrapper">
+                    <i class="iconoir-mail input-icon-left"></i>
+                    <input type="email" id="email" name="email" class="input input-with-icon-left" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+            </div>
+            <div class="buttons-group">
+                <button type="submit" class="btn-primary">
+                    Enviar código de recuperación
+                    <i class="iconoir-send-diagonal"></i>
+                </button>
+                <a href="login.html" class="btn-secondary">
+                    Volver a Iniciar Sesión
+                    <i class="iconoir-arrow-left" ></i></a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

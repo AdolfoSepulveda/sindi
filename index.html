@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital General Benavente</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/settings-menu.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+
+    <script src="src/js/settings-menu.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+    <div class="sidebar-logo">
+        <img src="src/logo.png" alt="Logo Hospital">
+    </div>
+    <div class="sidebar-divider"></div>
+    <ul class="sidebar-menu">
+        <li class="sidebar-menu-item">
+            <i class="iconoir-view-grid" style="font-size: 24px;"></i>
+            Dashboard
+        </li>
+        <li class="sidebar-menu-item">
+            <i class="iconoir-group" style="font-size: 24px;"></i>
+            Listado de Asociados
+        </li>
+        <li class="sidebar-menu-item sidebar-menu-item--has-submenu">
+            <i class="iconoir-user-plus" style="font-size: 24px;"></i>
+            Agregar Asociados
+            <i class="iconoir-nav-arrow-right sidebar-menu-item-arrow" style="font-size: 24px;"></i>
+            <ul class="sidebar-submenu">
+                <li class="sidebar-submenu-item">Carga Individual</li>
+                <li class="sidebar-submenu-item">Carga Masiva</li>
+                <li class="sidebar-submenu-item">Log de Errores de Subida</li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+<div class="navbar-container">
+        <nav class="navbar">
+            <div class="navbar-group">
+                <button id="hamburgerButton" class="hamburger-button">
+                    <i class="iconoir-menu-scale" ></i>
+                </button>
+                <img src="src/logo.png" alt="Logo Hospital" class="navbar-logo">
+            </div>
+            <div class="navbar-group">
+                <div class="settings-button-container">
+                    <button class="hamburger-button" id="settingsButton">
+                        <i class="iconoir-settings" ></i>
+                    </button>
+                    <ul class="settings-menu settings-menu-list" id="settingsMenu" style="display: none;">
+                        <li class="settings-menu-item">Usuarios</li>
+                        <li class="settings-menu-item">Establecimientos</li>
+                        <li class="settings-menu-item">Grados E.U.R.</li>
+                        <li class="settings-menu-item">Calidad Contractual</li>
+                        <li class="settings-menu-item">Servicio / Unidad</li>
+                        <li class="settings-menu-item">Géneros</li>
+                        <li class="settings-menu-item">Pueblos Originarios</li>
+                        <li class="settings-menu-item">Tipos de Cuidados</li>
+                        <li class="settings-menu-item">Zonas</li>
+                        <li class="settings-menu-item">Servicios de Salud</li>
+                        <li class="settings-menu-item">Planta</li>
+                    </ul>
+                </div>
+                <div class="navbar-divider"></div>
+                <span class="navbar-hospital-name">Hospital General Benavente</span>
+            </div>
+        </nav>
+</div>
+        <main class="main-content">
+            <div class="content-header">
+                <h3>Listado de Asociados y Asociadas</h3>
+                <p class="text-secondary">Lista con asociados/as, y su información básica</p>
+            </div>
+        </main>
+        <div class="sidebar">
+            <div class="sidebar-logo">
+                <img src="src/logo.png" alt="Logo Hospital">
+            </div>
+            <div class="sidebar-divider"></div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">Inicio</li>
+                <li class="sidebar-menu-item">Pacientes</li>
+                <li class="sidebar-menu-item">Consultas</li>
+                <li class="sidebar-menu-item">Reportes</li>
+                <li class="sidebar-menu-item">Configuración</li>
+            </ul>
+        </div>
+</body>
+</html>

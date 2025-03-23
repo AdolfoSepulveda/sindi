@@ -1,0 +1,211 @@
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    font-family: var(--font-primary);
+    font-size: var(--typo-size-small);
+    line-height: var(--typo-height-small);
+    padding: var(--spacing-8) var(--spacing-18);
+    border: 1px solid var(--border__def);
+    border-radius: var(--radius-sm);
+    background-color: var(--background__input);
+    color: var(--text__primary);
+    transition: all 0.2s ease-in-out;
+}
+
+.input::placeholder {
+    color: var(--text__placeholder);
+    font-size: var(--typo-size-small);
+    line-height: var(--typo-height-small);
+}
+
+.input:hover:not(:disabled):not([readonly]) {
+    border-color: var(--border__hov);
+}
+
+.input:focus:not(:disabled):not([readonly]) {
+    outline: none;
+    border-color: var(--border__act);
+    background-color: var(--background__section);
+}
+
+.input.error {
+    border-color: var(--border__dng);
+    background-color: var(--background__danger);
+}
+
+.input.error:focus {
+    box-shadow: 0 0 0 4px var(--error-100);
+}
+
+.input[readonly] {
+    background-color: var(--background__disabled);
+    border-color: var(--border__def);
+    color: var(--text__secondary);
+    cursor: default;
+}
+
+.input:disabled {
+    background-color: var(--background__disabled);
+    border-color: var(--border__def);
+    color: var(--text__disabled);
+    cursor: not-allowed;
+}
+
+.input-icon-left,
+.input-icon-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--icon__placeholder);
+    pointer-events: none;
+    width: 16px;
+    height: 16px;
+}
+
+.input-icon-left {
+    left: var(--spacing-18);
+}
+
+.input-icon-right {
+    right: var(--spacing-18);
+}
+
+.input-with-icon-left {
+    padding-left: calc(var(--spacing-18) + var(--spacing-24));
+}
+
+.input-with-icon-right {
+    padding-right: calc(var(--spacing-18) + var(--spacing-24));
+}
+
+.input-with-icons {
+    padding-left: calc(var(--spacing-18) + var(--spacing-24));
+    padding-right: calc(var(--spacing-18) + var(--spacing-24));
+}
+
+.btn {
+    padding: var(--spacing-12) var(--spacing-18);
+    border-radius: var(--radius-sm);
+    font-size: var(--typo-size-body);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--button__primary);
+    color: var(--text__oncolor);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--button__primaryhover);
+}
+
+.btn-primary:active {
+    background-color: var(--button__primaryactive);
+}
+
+.btn-secondary {
+    background-color: var(--button__secondary);
+    color: var(--text__primary);
+    border: 1px solid var(--border__def);
+}
+
+.btn-secondary:hover {
+    background-color: var(--button__secondaryhover);
+    border-color: var(--border__hov);
+}
+
+.btn-secondary:active {
+    background-color: var(--button__secondaryactive);
+    border-color: var(--border__act);
+}
+
+.btn-danger {
+    background-color: var(--button__danger);
+    color: var(--text__oncolor);
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: var(--button__dangerhover);
+}
+
+.input-verification {
+    width: 64px;
+    height: 42px;
+    font-family: var(--font-primary);
+    font-size: var(--typo-size-h5);
+    text-align: center;
+    padding: var(--spacing-8);
+    border: 1px solid var(--border__def);
+    border-radius: var(--radius-sm);
+    background-color: var(--background__input);
+    color: var(--text__primary);
+    transition: all 0.2s ease-in-out;
+}
+
+.input-verification::placeholder {
+    content: '_';
+    text-align: center;
+    color: var(--text__placeholder);
+}
+
+.input-verification:hover:not(:disabled):not([readonly]) {
+    border-color: var(--border__hov);
+}
+
+.input-verification:focus:not(:disabled):not([readonly]) {
+    outline: none;
+    border-color: var(--border__act);
+    background-color: var(--background__section);
+}
+
+.input-verification.error {
+    border-color: var(--border__dng);
+    background-color: var(--background__danger);
+}
+
+.input-verification.error:focus {
+    box-shadow: 0 0 0 4px var(--error-100);
+}
+
+.input-verification[readonly] {
+    background-color: var(--background__disabled);
+    border-color: var(--border__def);
+    color: var(--text__secondary);
+    cursor: default;
+}
+
+.input-verification:disabled {
+    background-color: var(--background__disabled);
+    border-color: var(--border__def);
+    color: var(--text__disabled);
+    cursor: not-allowed;
+}
+
+.btn-danger:active {
+    background-color: var(--button__dangeractive);
+}
+
+.btn:disabled {
+    background-color: var(--button__primarydisabled);
+    color: var(--text__disabled);
+    cursor: not-allowed;
+    pointer-events: none;
+}

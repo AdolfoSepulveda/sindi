@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenpruss - Inicio de Sesión</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+</head>
+<body>
+    <div class="login-container">
+        <img src="src/logo.png" alt="Fenpruss Logo" class="logo">
+        
+        <div class="header-group">
+            <h4>Le damos la bienvenida</h4>
+            <p class="text-secondary">Por favor, introduzca sus credenciales para acceder a su cuenta</p>
+        </div>
+        
+        <form id="login-form">
+            <div class="inputs-group">
+                <div class="form-group">
+                    <label for="email">Correo <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <i class="iconoir-mail input-icon-left"></i>
+                        <input type="email" id="email" class="input input-with-icon-left" placeholder="ej: m.navarro@mail.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Ingrese su contraseña <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <i class="iconoir-lock input-icon-left"></i>
+                        <input type="password" id="password" class="input input-with-icon-left" placeholder="••••••••" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="buttons-group">
+                <button type="submit" class="btn-primary">
+                    Iniciar sesión
+                    <i class="iconoir-log-in icon"></i>
+                </button>
+                
+                <a href="recuperar-contraseña.html" class="btn-secondary">
+                    ¿Olvidó su contraseña?
+                    <i class="iconoir-password-xmark icon"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+    <script src="src/js/login.js"></script>
+</body>
+</html>

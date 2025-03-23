@@ -1,0 +1,70 @@
+.settings-menu {
+    position: absolute;
+    top: calc(100% + var(--spacing-4));
+    right: 0;
+    background-color: var(--background__section);
+    border: 1px solid var(--border__def);
+    border-radius: var(--radius-sm);
+    box-shadow: 0px 4px 6px -2px var(--fx__shwdef);
+    z-index: 1000;
+    display: none;
+    transform-origin: top right;
+    opacity: 0;
+    min-width: 250px;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transform: scale(0.95);
+}
+
+.settings-menu[style*="display: block"] {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.settings-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: var(--spacing-12);
+}
+
+.settings-menu-item {
+    padding: var(--spacing-12) var(--spacing-18);
+    color: var(--text__secondary);
+    font-size: var(--typo-size-body);
+    line-height: var(--typo-height-body);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
+    display: block;
+    margin-bottom: var(--spacing-2);
+}
+
+.settings-menu-item:hover {
+    background-color: var(--background__wrapper);
+    color: var(--text__primary);
+}
+
+.settings-button-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    padding: var(--spacing-4);
+}
+
+.settings-button {
+    background: none;
+    border: none;
+    padding: var(--spacing-4);
+    margin: 0;
+    cursor: pointer;
+    color: var(--icon__primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.settings-button:hover {
+    color: var(--icon__secondary);
+}

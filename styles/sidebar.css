@@ -1,0 +1,108 @@
+.sidebar {
+    padding: var(--spacing-36) var(--spacing-24);
+    background-color: var(--background__section);
+    border-right: 1px solid var(--border__def);
+    height: 100vh;
+    width: 280px;
+    position: fixed;
+    left: -400px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar--open {
+    left: 0;
+}
+
+.sidebar-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-24);
+}
+
+.sidebar-logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+.sidebar-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border__def);
+    margin-bottom: var(--spacing-24);
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu-item {
+    padding: var(--spacing-12) var(--spacing-18);
+    color: var(--text__secondary);
+    font-size: var(--typo-size-body);
+    line-height: var(--typo-height-body);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.sidebar-menu-item:hover {
+    background-color: var(--background__wrapper);
+    color: var(--text__primary);
+}
+
+.sidebar-menu-item--has-submenu {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sidebar-menu-item-arrow {
+    margin-left: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.sidebar-menu-item--has-submenu:hover .sidebar-menu-item-arrow {
+    transform: rotate(90deg);
+}
+
+.sidebar-submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: calc(100% + var(--spacing-4));
+    left: 0;
+    width: 100%;
+    background-color: var(--background__section);
+    border-radius: var(--radius-sm);
+    box-shadow: 0px 4px 6px -2px var(--fx__shwdef);
+}
+
+.sidebar-menu-item--has-submenu:hover .sidebar-submenu {
+    display: block;
+}
+
+.sidebar-submenu-item {
+    padding: var(--spacing-8) var(--spacing-18);
+    color: var(--text__secondary);
+    font-size: var(--typo-size-body);
+    line-height: var(--typo-height-body);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-submenu-item:hover {
+    background-color: var(--background__wrapper);
+    color: var(--text__primary);
+}

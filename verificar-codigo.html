@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Código - Salud</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="src/logo.png" alt="Fenpruss Logo" class="logo">
+        <div class="header-group">
+            <h4>Recuperar contraseña</h4>
+            <p class="text-secondary">Enviamos un código de cuatro dígitos a su correo. Ingréselo aquí para actualizar su contraseña.</p>
+        </div>
+        <form action="nueva-contraseña.html">
+                <div class="inputs-group">
+                    <div class="form-group" style="display: flex; gap: var(--spacing-12); justify-content: center;">
+                        <input type="text" class="input-verification" maxlength="1" pattern="[0-9]" inputmode="numeric" required placeholder="_" style="text-align: center;">
+                        <input type="text" class="input-verification" maxlength="1" pattern="[0-9]" inputmode="numeric" required placeholder="_" style="text-align: center;">
+                        <input type="text" class="input-verification" maxlength="1" pattern="[0-9]" inputmode="numeric" required placeholder="_" style="text-align: center;">
+                        <input type="text" class="input-verification" maxlength="1" pattern="[0-9]" inputmode="numeric" required placeholder="_" style="text-align: center;">
+                    </div>
+                </div>
+                <div class="buttons-group">
+                    <button type="submit" class="btn btn-primary">Verificar</button>
+                </div>
+            </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('.input-verification');
+            
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', function(e) {
+                    if (e.target.value.length === 1) {
+                        if (!isNaN(e.target.value)) {
+                            if (index < inputs.length - 1) {
+                                inputs[index + 1].focus();
+                            }
+                        } else {
+                            e.target.value = '';
+                        }
+                    }
+                });
+
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && e.target.value === '' && index > 0) {
+                        inputs[index - 1].focus();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

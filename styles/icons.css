@@ -1,0 +1,45 @@
+/* Input Icons Styles */
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-icon-left,
+.input-icon-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--icon__placeholder);
+    pointer-events: none;
+    width: 16px;
+    height: 16px;
+    stroke-width: 1.5;
+}
+
+.input-icon-left {
+    left: var(--spacing-18);
+}
+
+.input-icon-right {
+    right: var(--spacing-18);
+}
+
+/* Adjust input padding when icon is present */
+.input-with-icon-left {
+    padding: var(--spacing-8) var(--spacing-18);
+    padding-left: calc(var(--spacing-18) + var(--spacing-24));
+}
+
+.input-with-icon-right {
+    padding: var(--spacing-8) var(--spacing-18);
+    padding-right: calc(var(--spacing-18) + var(--spacing-24));
+}
+
+.input-with-icons {
+    padding: var(--spacing-8) var(--spacing-18);
+    padding-left: calc(var(--spacing-18) + var(--spacing-24));
+    padding-right: calc(var(--spacing-18) + var(--spacing-24));
+}

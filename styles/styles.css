@@ -1,0 +1,248 @@
+/* Main Styles using Design System */
+
+/* Import fonts */
+@import url('fonts.css');
+
+/* Import base styles with design system variables */
+@import url('base.css');
+
+/* Import input icons styles */
+@import url('icons.css');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background__section);
+    padding-top: var(--spacing-48);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: var(--spacing-36);
+    background-color: var(--background__section);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: var(--border__def) 1px solid;
+}
+
+.logo {
+    margin: 0 auto var(--spacing-24);
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Header Group */
+.header-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+    margin-bottom: var(--spacing-36);
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: var(--spacing-8);
+    color: var(--text-primary);
+    line-height: var(--typo-height-h5);
+}
+
+.login-container p {
+    font-size: var(--typo-size-small);
+    color: var(--text__secondary);
+    line-height: var(--typo-height-small);
+}
+
+/* Form Elements Group */
+.form-group {
+    margin-bottom: var(--spacing-12);
+    text-align: left;
+}
+
+/* Form Elements Group */
+.inputs-group {
+    margin-bottom: var(--spacing-24);
+}
+
+@media (max-width: 480px) {
+    .inputs-group {
+        margin-top: var(--spacing-none);
+    }
+}
+
+label {
+    display: block;
+    font-size: var(--typo-size-small);
+    margin-bottom: var(--spacing-4);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.required {
+    color: var(--error-500);
+}
+
+input {
+    width: 100%;
+    padding: var(--spacing-8) var(--spacing-18);
+    border: 1px solid var(--border__def);
+    border-radius: var(--radius-sm);
+    font-size: var(--typo-size-body);
+    line-height: var(--typo-height-small);
+    color: var(--text-primary);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 2px rgba(63, 141, 201, 0.2);
+}
+
+/* Button Styles */
+.buttons-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+}
+
+.btn-primary {
+    width: 100%;
+    min-height: 32px;
+    padding: var(--spacing-12) var(--spacing-18);
+    background-color: var(--primary-900);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--typo-size-body);
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-800);
+}
+
+.btn-primary:active {
+    background-color: var(--primary-700);
+}
+
+.icon {
+    margin-left: var(--spacing-4);
+    width: 20px;
+    height: 20px;
+}
+
+/* Forgot Password Link */
+.btn-secondary {
+    width: 100%;
+    min-height: 32px;
+    padding: var(--spacing-12) var(--spacing-18);
+    background-color: transparent;
+    color: var(--text__primary);
+    border: 1px solid var(--border__def);
+    border-radius: var(--radius-sm);
+    font-size: var(--typo-size-body);
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: var(--background__section);
+    border-color: var(--primary-600);
+    color: var(--text__primary);
+}
+
+.btn-secondary:active {
+    background-color: var(--background__section);
+    border-color: var(--primary-700);
+    color: var(--text__primary);
+}
+
+.btn-secondary .icon {
+    margin-left: var(--spacing-4);
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .login-container {
+        max-width: 100%;
+        padding: var(--spacing-18);
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-24);
+    }
+
+    .logo {
+        margin: var(--spacing-36) auto;
+        max-width: 180px;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .header-group {
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .inputs-group {
+        margin: 0;
+    }
+
+    .buttons-group {
+        position: fixed;
+        bottom: var(--spacing-36);
+        left: var(--spacing-18);
+        right: var(--spacing-18);
+        margin: 0;
+        padding: 0;
+        background-color: var(--background__section);
+        z-index: 100;
+    }
+}
