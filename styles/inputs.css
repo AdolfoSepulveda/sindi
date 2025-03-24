@@ -23,10 +23,37 @@
     transition: all 0.2s ease-in-out;
 }
 
-.input::placeholder {
+.placeholder-base {
     color: var(--text__placeholder);
+    opacity: 1;
+}
+
+.input::placeholder {
     font-size: var(--typo-size-small);
     line-height: var(--typo-height-small);
+    color: var(--text__placeholder);
+    opacity: 1;
+}
+
+.input::-webkit-input-placeholder {
+    font-size: var(--typo-size-small);
+    line-height: var(--typo-height-small);
+    color: var(--text__placeholder);
+    opacity: 1;
+}
+
+.input::-moz-placeholder {
+    font-size: var(--typo-size-small);
+    line-height: var(--typo-height-small);
+    color: var(--text__placeholder);
+    opacity: 1;
+}
+
+.input:-ms-input-placeholder {
+    font-size: var(--typo-size-small);
+    line-height: var(--typo-height-small);
+    color: var(--text__placeholder);
+    opacity: 1;
 }
 
 .input:hover:not(:disabled):not([readonly]) {
@@ -161,9 +188,9 @@
 }
 
 .input-verification::placeholder {
+    composes: placeholder-base;
     content: '_';
     text-align: center;
-    color: var(--text__placeholder);
 }
 
 .input-verification:hover:not(:disabled):not([readonly]) {

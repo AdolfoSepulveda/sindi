@@ -1,5 +1,5 @@
 .sidebar {
-    padding: var(--spacing-36) var(--spacing-24);
+    padding: var(--spacing-36) var(--spacing-24) 0;
     background-color: var(--background__section);
     border-right: 1px solid var(--border__def);
     height: 100vh;
@@ -39,6 +39,13 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.sidebar-menu-top {
+    margin-bottom: var(--spacing-24);
 }
 
 .sidebar-menu-item {
@@ -87,10 +94,31 @@
     background-color: var(--background__section);
     border-radius: var(--radius-sm);
     box-shadow: 0px 4px 6px -2px var(--fx__shwdef);
+    z-index: 1;
 }
 
 .sidebar-menu-item--has-submenu:hover .sidebar-submenu {
     display: block;
+}
+
+.sidebar-menu-item--logout {
+    position: absolute;
+    bottom: var(--spacing-36);
+    left: var(--spacing-24);
+    right: var(--spacing-24);
+    color: var(--text__danger);
+    z-index: 2;
+    margin-bottom: var(--spacing-36);
+    text-decoration: none;
+}
+
+.sidebar-menu-item--logout i {
+    color: var(--icon__danger);
+}
+
+.sidebar-menu-item--logout:hover {
+    background-color: var(--background__wrapper);
+    color: var(--text__danger);
 }
 
 .sidebar-submenu-item {
