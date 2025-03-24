@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
 
         // Aquí se puede agregar la lógica de validación y autenticación
-        // Por ahora, solo redirigimos a index.html
-        window.location.href = 'index.html';
+        // Por ahora, solo redirigimos a indicadores.html
+        window.location.href = 'indicadores.html';
     });
 });
